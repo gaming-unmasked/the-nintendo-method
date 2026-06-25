@@ -1,0 +1,295 @@
+/* Enhanced styles for satire site */
+html {
+  font-size: 16px;
+}
+body {
+	font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+	font-size: clamp(0.9rem, 1.5vw, 1rem);
+	line-height: 1.5;
+	margin: 0;
+	background-color: #fff;
+	color: #222;
+	padding: 1em;
+}
+/* Common styles for nav */
+nav {
+  display: flex;
+  flex-direction: row; /* Change from column to row */
+  gap: 10px;
+  justify-content: center; /* Optional: centers items horizontally */
+  gap: 15px; /* Adds spacing between links */
+  margin: 5px 0;
+}
+nav a {
+  display: inline-block; /* inline-block or block both work with flex */
+  padding: 3px 10px;
+  color: #1976d2;
+  text-decoration: none !important; /* Keep this */
+  outline: none;
+  border-bottom: none !important; /* This removes the dotted line */
+}
+nav a:hover {
+  text-decoration: none; /* Change from underline to none */
+  border-bottom: none !important; /* Ensure hover doesn’t reapply it */
+}
+/* Hamburger button */
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+	margin-bottom: 10px;
+  }
+header{
+	background-color:#ddd;
+	line-height: 1.0;
+	padding:10px 0;
+	text-align: center;
+}
+header h1{
+	margin:0;
+}
+.container {
+    max-width: 960px;
+    width: 96%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    border-radius: 8px;
+	box-sizing: border-box; /* Ensures width includes padding */
+}
+.important {
+  background-color: #fff4d6;
+  border-left: 6px solid #f0a500;
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  font-size: 1.05em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+h1 {
+  font-size: 1.4em;
+}
+h2 {
+  font-size: 1.25em;
+}
+h3 {
+  font-size: 1.1em;
+}
+h4 {
+  font-size: 1.1em;
+}
+button, input, select {
+  font-size: clamp(0.875rem, 1.8vw, 1rem);
+}
+h1, h2, h3 {
+  font-weight: 500;
+  color: #990000;
+  text-align: center;
+}
+h4 {
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 0;
+}
+p {
+  margin: 1em 0;
+  margin-bottom: 1.2em;
+}
+p[style*="text-align: center;"] {
+  font-weight: 500;
+  font-size: 1.05rem;
+  margin-top: 0;
+  color: #444;
+}
+hr {
+  margin: 1.5em 0;
+  border: none;
+  border-top: 1px dashed #bbb;
+}
+ul {
+  list-style: none;
+  padding-left: 1em;
+}
+ul li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 1em;
+}
+ul li::before {
+  content: "🎮";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+}
+a {
+  color: #0055bb;
+  text-decoration: none;
+  border-bottom: 1px dashed #888;
+  transition: all 0.2s;
+}
+a:hover {
+  color: #b30000;
+  border-color: transparent;
+  text-decoration: underline;
+}
+.disclaimer {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: gray;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  background-color: #fefefe;
+}
+.footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+}
+footer.footer {
+  margin-top: 60px;
+  padding: 1em 0;
+  border-top: 1px solid #ddd;
+  color: #777;
+  font-size: 0.95em;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+footer.footer em {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* Tooltip styling */
+
+/* Hero Image Styling */
+/* This remains the same */
+.hero-image {
+	position: relative;
+	padding: 2rem;
+	text-align: center;
+	color: #a00101;
+	margin-bottom: 20px;
+}
+.hero-image img {
+	width: 70%;
+	height: auto;
+	display: block;
+	max-width: 800px;
+	margin: 0 auto;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* Position the overlay text */
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* Style the <p> text like your original <h1> */
+.hero-text {
+	font-size: clamp(1.5rem, 4vw, 2rem);
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 4px 4px 4px #000;
+	margin: 0;
+}
+.side-fact {
+  background: #fef3c7;
+  padding: 1em;
+  border-left: 5px solid #facc15;
+  margin: 1em 0;
+  font-style: italic;
+}
+.ironic-comment {
+	font-style: italic;
+	color: #666;
+}
+.tooltip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted #888;
+}
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.85em;
+  border-radius: 6px;
+  white-space: pre-line;
+  top: 120%;
+  left: 0;
+  z-index: 10;
+  width: max-content;
+  max-width: 260px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+.tooltip:hover::after {
+  opacity: 1;
+}
+.tooltip:focus::after {
+  opacity: 1;
+}
+/* Media Query: Smaller padding for mobile */
+@media (max-width: 780px) {
+.hero-image {
+    padding: 1rem;
+	}
+body {
+	fon-size: 16px;
+	padding: 1em 0.8em;
+}
+h1 {
+  font-size: 1.3em;
+}
+h2 {
+  font-size: 1.15em;
+}
+h3 {
+  font-size: 1.05em;
+}
+h4 {
+  font-size: 1.05em;
+}
+.important {
+	font-size: 1em;
+	padding: 0.8em 1em;
+}
+nav {
+	flex-direction: column;
+	display: none; /* Hide menu initially */
+}
+nav.show {
+	display: flex;
+}
+nav a {
+	line-height: 70%;
+}
+.hamburger {
+	display: block;
+}
+/* Reduce button padding for compact size */
+button {
+	padding: 5px 10px;
+	font-size: 14px;
+}
+.disclaimer { /* Added the dot here */
+    padding-top: 0.8rem;
+    margin-top: 1rem;
+    border-top: 0.8px solid #ccc;
+    font-size: 11px;
+}
+}
